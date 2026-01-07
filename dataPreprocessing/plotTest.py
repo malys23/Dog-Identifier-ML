@@ -3,12 +3,12 @@ from matplotlib import pyplot
 from matplotlib.image import imread
 
 #define location of dataset
-folder = 'train/'
+folder = 'dataPreprocessing/train/'
 
 #plot first few images
 for i in range(9):
     #define subplot
-    pyplot.subplot(330 + 1, i)
+    pyplot.subplot(330 + 1 + i)
     #define file name
     filename = folder + 'dog (' + str(i+1) + ').jpg'
     print(filename)
