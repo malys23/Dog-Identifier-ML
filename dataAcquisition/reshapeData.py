@@ -53,6 +53,13 @@ for file in listdir(folder2):
 save('test_set_x.npy', photos)
 save('test_set_y.npy', labels)
 
+###################################################
+#Generate list_classes file
+classes = list()
+classes.append('non-dog')
+classes.append('dog')
+save('list_classes.npy', classes)
+
 #test to check if images properly stored
 #test_set_x_orig = np.load('test_set_x.npy')
 #pyplot.imshow(test_set_x_orig[1])
