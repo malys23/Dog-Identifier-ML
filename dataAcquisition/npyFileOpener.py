@@ -1,4 +1,4 @@
 import numpy as np
 
-data = np.load('test_set_x.npy')
+data = np.load('train_set_y.npy')
 print(data)
