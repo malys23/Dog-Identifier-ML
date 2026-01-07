@@ -15,6 +15,8 @@ test_set_y = np.load('test_dogvnondog/test_set_y.npy')
 classes = pd.read_excel('train_dogvnondog/list_classes.xlsx')
 
 #test to see if data loaded
-index = 25
+index = 29
 plt.imshow(train_set_x_orig[index])
-print ("y = " + str(train_set_y[:, index]) + ", it's a '" + classes[np.squeeze(train_set_y[:, index])].decode("utf-8") +  "' picture.")
+print(train_set_y[index])
+print ("y = " + str(train_set_y[index]) + ", it's a '" + classes[0].values[(train_set_y[index])] +  "' picture.")
+plt.show()
