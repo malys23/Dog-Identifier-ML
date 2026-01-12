@@ -8,8 +8,8 @@ import numpy as np
 def propagate(w, b, X, Y):
     m = X.shape[1]
     #Forward propagation
-    A = 1/(1+ np.exp(-1*(np.dot(w.T, X)+b)))
-    cost = (-1/m) * np.sum(Y*np.log(A) + (1-Y)*np.log(1-A))
+    A = 1 / (1 + np.exp(-1*(np.dot(w.T, X)+b)))
+    cost = (-1/m) * np.sum(Y*np.log(A)+(1-Y)*np.log(1-A))
     #Backward propagation
     dw = (1/m) * np.dot(X, (A-Y).T)
     db = (1/m) * np.sum(A-Y)
