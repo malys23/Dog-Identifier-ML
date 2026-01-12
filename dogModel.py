@@ -11,6 +11,7 @@ from sigmoid import sigmoid
 from initialize_with_zeros import initialize_with_zeros
 from propagate import propagate
 from optimize import optimize
+from predict import predict
 
 train_set_x_orig = np.load('train_dogvnondog/train_set_x.npy')
 train_set_y = np.load('train_dogvnondog/train_set_y.npy')
@@ -72,3 +73,10 @@ print ("b = " + str(params["b"]))
 print ("dw = " + str(grads["dw"]))
 print ("db = " + str(grads["db"]))
 print("Costs = " + str(costs))
+
+#Test predict
+print("Testing Prdictions")
+w = np.array([[0.1124579], [0.23106775]])
+b = -0.3
+X = np.array([[1., -1.1, -3.2],[1.2, 2., 0.1]])
+print ("predictions = " + str(predict(w, b, X)))
