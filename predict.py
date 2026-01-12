@@ -1,6 +1,7 @@
-# function 
+# function that predicts if label is 0 or 1 using learned logistic regression parameters (w,b)
 
 import numpy as np
+
 def predict(w, b, X):
     m = X.shape[1]
     Y_prediction = np.zeros((1, m))

@@ -7,11 +7,7 @@ from PIL import Image
 from scipy import ndimage
 import pandas as pd
 
-from sigmoid import sigmoid
-from initialize_with_zeros import initialize_with_zeros
-from propagate import propagate
-from optimize import optimize
-from predict import predict
+from model import model
 
 train_set_x_orig = np.load('train_dogvnondog/train_set_x.npy')
 train_set_y = np.load('train_dogvnondog/train_set_y.npy')
@@ -34,49 +30,5 @@ test_set_x_flatten = test_set_x_orig.reshape(test_set_x_orig.shape[0], -1).T
 train_set_x = train_set_x_flatten / 255
 test_set_x = test_set_x_flatten / 255
 
-#Testing sigmoid################################################
-x = np.array([0, 2])
-output = sigmoid(x)
-print(output)
-
-#Testing Init w Zeros############################################
-dim = 2
-w, b = initialize_with_zeros(dim)
-
-assert type(b) == float
-print ("w = " + str(w))
-print ("b = " + str(b))
-
-#Testing propagate###############################################
-w =  np.array([[1.], [2]])
-b = 1.5
-
-# X is using 3 examples, with 2 features each
-# Each example is stacked column-wise
-X = np.array([[1., -2., -1.], [3., 0.5, -3.2]])
-Y = np.array([[1, 1, 0]])
-grads, cost = propagate(w, b, X, Y)
-
-assert type(grads["dw"]) == np.ndarray
-assert grads["dw"].shape == (2, 1)
-assert type(grads["db"]) == np.float64
-
-print ("dw = " + str(grads["dw"]))
-print ("db = " + str(grads["db"]))
-print ("cost = " + str(cost))
-
-#Test optimize
-params, grads, costs = optimize(w, b, X, Y, num_iterations=100, learning_rate=0.009, print_cost=False)
-
-print ("w = " + str(params["w"]))
-print ("b = " + str(params["b"]))
-print ("dw = " + str(grads["dw"]))
-print ("db = " + str(grads["db"]))
-print("Costs = " + str(costs))
-
-#Test predict
-print("Testing Prdictions")
-w = np.array([[0.1124579], [0.23106775]])
-b = -0.3
-X = np.array([[1., -1.1, -3.2],[1.2, 2., 0.1]])
-print ("predictions = " + str(predict(w, b, X)))
+#4: Run model
+logistic_regression_model = model(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations=3000, learning_rate=0.005, print_cost=True)
