@@ -1,6 +1,6 @@
 # Dog-Identifier-ML
 Logistic regression classifier to recognize dogs. <br>
-Results: Training accuracy is 100% while test accuracy is only 58%. <br>
+Results: Training accuracy is 100% while test accuracy is only 58%. The model is overfitting. <br>
 Learning Outcome: Sourcing and preprocessing data is an important step and may be time consuming <br>
 <br>
 The model uses the following:<br>
