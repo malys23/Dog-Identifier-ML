@@ -21,4 +21,3 @@ Sourcing and preprocessing data is an important step and may be time consuming <
 
 ## Sources <br>
 Data taken from "Dog vs Not-Dog" by Daniel Shan Balico on kaggle.com<br>
-
