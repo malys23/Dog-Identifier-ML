@@ -14,6 +14,7 @@ Sourcing and preprocessing data is an important step and may be time consuming <
 - model.py - Model function compiling all functions to create a model<br>
 - dogModel.py - main function that organizes data and calls the model<br>
 <br>
-## Sources
+
+## Sources <br>
 Data taken from "Dog vs Not-Dog" by Daniel Shan Balico on kaggle.com<br>
 
