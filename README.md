@@ -1,17 +1,14 @@
-# Dog-Identifier-ML
+# Dog-Identifier-ML-Model
 Logistic regression classifier to recognize dogs. <br>
-
-## Installing:
-Using uv package manager: ``` uv.sync ``` <br>
-
-## Running:
-Use ```python3 -m main.py``` <br>
+<br> 
 
 ## Results: 
-Training accuracy is 100% while test accuracy is only 58%. <br>
+Training accuracy is 100% while test accuracy is only 58%. The model is overfitting. <br>
+<br> 
 
-## Learning Outcome:
-Sourcing and preprocessing data is an important step and may be time consuming<br>
+## Learning Outcome: 
+Sourcing and preprocessing data is an important step and may be time consuming <br>
+<br>
 
-## Sources:
+## Sources <br>
 Data taken from "Dog vs Not-Dog" by Daniel Shan Balico on kaggle.com<br>
