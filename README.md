@@ -1,10 +1,10 @@
 # Dog-Identifier-ML
 Logistic regression classifier to recognize dogs. <br>
 
-## Installing:
+### Installing:
 Using uv package manager: ``` uv.sync ``` <br>
 
-## Running:
+### Running:
 Use ```python3 -m main.py``` <br>
 
 ## Results: 
