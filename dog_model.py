@@ -1,13 +1,5 @@
 import numpy as np
-import copy
-import matplotlib.pyplot as plt
-import h5py
-import scipy
-from PIL import Image
-from scipy import ndimage
-import pandas as pd
-
-from model import model
+from build_model import build_model
 
 train_set_x_orig = np.load('train_dogvnondog/train_set_x.npy')
 train_set_y = np.load('train_dogvnondog/train_set_y.npy')
@@ -31,4 +23,4 @@ train_set_x = train_set_x_flatten / 255
 test_set_x = test_set_x_flatten / 255
 
 #4: Run model
-logistic_regression_model = model(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations=3000, learning_rate=0.005, print_cost=True)
+logistic_regression_model = build_model(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations=3000, learning_rate=0.005, print_cost=True)
