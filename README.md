@@ -2,10 +2,11 @@
 Logistic regression classifier to recognize dogs. <br>
 
 ### Installing:
+Install uv: ```pip install uv``` <br>
 Using uv package manager: ``` uv.sync ``` <br>
 
 ### Running:
-Use ```uv run python main.py``` <br>
+Use ```uv run src/main.py``` <br>
 
 ## Results: 
 Training accuracy is 100% while test accuracy is only 58%. <br>
