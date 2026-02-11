@@ -2,7 +2,7 @@ import numpy as np
 
 #Implements cost function and gradient for propagation
 #X = data size, Y=true label vector
-#returns grads= dictionary of gradients of weights and bias (dw, db)
+#returns grads= dictionary of gradient (derivatives) of weights and bias
 # and also cost - negative log-likelihood cost for logistic regression
 def propagate(weights, bias, X, Y):
     m = X.shape[1]
