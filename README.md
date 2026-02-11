@@ -1,5 +1,5 @@
 # Dog-Identifier-ML
-Logistic regression classifier to recognize dogs. <br>
+Logistic regression classifier to recognize images of dogs. <br>
 
 ### Installing:
 Install uv: ```pip install uv``` <br>
